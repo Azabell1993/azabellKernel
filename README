@@ -27,5 +27,4 @@ SYSCALL_DEFINE0(azabell) {
 	printk("azabell kernel\n");
 	return (0);
 }
-```  
   
