@@ -16,9 +16,10 @@ several of them using the Restructured Text markup notation.
 Please read the Documentation/process/changes.rst file, as it contains the
 requirements for building and running the kernel, and information about
 the problems which may result by upgrading your kernel.
--- -------------------------------------------------------------------------
-
-
+  
+  
+  
+  
 ```
 include <linux/kernel.h>
 #include <linux/syscalls.h>
@@ -27,4 +28,4 @@ SYSCALL_DEFINE0(azabell) {
 	printk("azabell kernel\n");
 	return (0);
 }
-```  
+```
