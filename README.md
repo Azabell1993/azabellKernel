@@ -19,8 +19,39 @@ the problems which may result by upgrading your kernel.
 
 ////////////////////////////////////////////////////////////////
 
+### Ubuntu22.04 Custom Build Linux Kernel  
+-- 
 ```
-include <linux/kernel.h>
+azabell@azabell-kernelhost:~/Desktop/linux-6.5.2/azabell$ sudo neofetch
+            .-/+oossssoo+/-.               root@azabell-kernelhost 
+        `:+ssssssssssssssssss+:`           ----------------------- 
+      -+ssssssssssssssssssyyssss+-         OS: Ubuntu 22.04.3 LTS x86_64 
+    .ossssssssssssssssssdMMMNysssso.       Host: VMware Virtual Platform None 
+   /ssssssssssshdmmNNmmyNMMMMhssssss/      Kernel: 6.5.2azabellKernel 
+  +ssssssssshmydMMMMMMMNddddyssssssss+     Uptime: 33 mins 
+ /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/    Packages: 1948 (dpkg), 14 (snap) 
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Shell: bash 5.1.16 
++sssshhhyNMMNyssssssssssssyNMMMysssssss+   Resolution: 2776x1674 
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso   DE: GNOME 42.9 
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso   WM: Mutter 
++sssshhhyNMMNyssssssssssssyNMMMysssssss+   WM Theme: Adwaita 
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Theme: Yaru [GTK2/3] 
+ /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/    Icons: Yaru [GTK2/3] 
+  +sssssssssdmydMMMMMMMMddddyssssssss+     Terminal: x-terminal-emul 
+   /ssssssssssshdmNNNNmyNMMMMhssssss/      CPU: 11th Gen Intel i7-1195G7 (6) @ 2.918GHz 
+    .ossssssssssssssssssdMMMNysssso.       GPU: 00:0f.0 VMware SVGA II Adapter 
+      -+sssssssssssssssssyyyssss+-         Memory: 1111MiB / 3876MiB 
+        `:+ssssssssssssssssss+:`
+            .-/+oossssoo+/-.                                       
+                                                                   
+```  
+
+
+
+### azabell/azabell.c
+
+```
+#include <linux/kernel.h>
 #include <linux/syscalls.h>
 
 SYSCALL_DEFINE0(azabell) {
